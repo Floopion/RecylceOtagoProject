@@ -9,6 +9,13 @@ body {
 main {
   flex: 1 0 auto; }
 
+h1 {
+  margin-bottom: 6.1rem;
+  text-align: center; }
+
+h2, h3 {
+  text-align: center; }
+
 /*            Navigation Menu & Side Navigation Styles           */
 .nav-padding {
   margin: 0 50px; }
@@ -42,5 +49,18 @@ main {
       .sidenav-footer .row .social-icons a:hover {
         background-color: inherit;
         opacity: 1; }
+
+/*      Footer Adjustments      */
+.footer-margin-reset {
+  margin-bottom: 0; }
+
+/*          Home Page           */
+.main-area-image {
+  float: left;
+  width: 60%;
+  margin-right: 5px;
+  -webkit-clip-path: polygon(0% 0%, 59.52% 0.19%, 101.08% 7.67%, 101.33% 14.99%, 98.78% 18.47%, 97.34% 31%, 92.2% 34.26%, 82.61% 81.21%, 70.93% 83.55%, 44.16% 99.99%, 0% 100%);
+  clip-path: polygon(0% 0%, 59.52% 0.19%, 101.08% 7.67%, 101.33% 14.99%, 98.78% 18.47%, 97.34% 31%, 92.2% 34.26%, 82.61% 81.21%, 70.93% 83.55%, 44.16% 99.99%, 0% 100%);
+  shape-outside: polygon(0% 0%, 59.52% 0.19%, 101.08% 7.67%, 101.33% 14.99%, 98.78% 18.47%, 97.34% 31%, 92.2% 34.26%, 82.61% 81.21%, 70.93% 83.55%, 44.16% 99.99%, 0% 100%); }
 
 /*# sourceMappingURL=styles.css.map */
