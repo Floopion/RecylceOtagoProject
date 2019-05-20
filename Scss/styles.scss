@@ -1,11 +1,31 @@
 /*      Base color scheme and style for the document     */
 
 body{
-    background-color: #333;
-    color: white;
+    background-color: whitesmoke;
+    color: #333;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+
+.banner{
+  background-color: darkblue;
+  height: 60vh;
+  margin: 25px 0;
+  border-bottom: thick solid darkorange;
+  h1{
+    color: white;
+    margin-top: 25vh;
+    margin-left: 10vw;
+    float: left;
+  }
+}
+
+.water-icon{
+  margin-top: 20vh;
+  margin-right: 30vw;
+  float: right;
+  color: white;
 }
 
 main {
@@ -17,9 +37,9 @@ h1{
   text-align: center;
 }
 
-h2,h3{
-  text-align: center;
-}
+// h2,h3{
+//   text-align: center;
+// }
 /*            Navigation Menu & Side Navigation Styles           */
 
 .nav-padding{
@@ -83,4 +103,49 @@ h2,h3{
     clip-path: polygon(0% 0%, 59.52% 0.19%, 101.08% 7.67%, 101.33% 14.99%, 98.78% 18.47%, 97.34% 31%, 92.2% 34.26%, 82.61% 81.21%, 70.93% 83.55%, 44.16% 99.99%, 0% 100%);
     shape-outside: polygon(0% 0%, 59.52% 0.19%, 101.08% 7.67%, 101.33% 14.99%, 98.78% 18.47%, 97.34% 31%, 92.2% 34.26%, 82.61% 81.21%, 70.93% 83.55%, 44.16% 99.99%, 0% 100%);
   }
+
+/*          Quiz Page           */
+
+#resultArea{
+  display: none;
+}
+
+h2.quizScore{
+  font-family: Arial, sans-serif;
+  font-size:25px;
+}
+
+div.quizAnswers{
+  font-family: Arial, sans-serif;
+  font-size:16px;
+  color: #424242;
+  padding: 4px 0 4px 0;
+}
+
+label {
+  font-family: Arial, sans-serif;
+  font-size:14px;
+  color: #424242;
+  vertical-align:top;
+}
+
+.hide {
+	  display:none;
+}
+
+.wrong-answer{
+  color: red;
+  margin: 0;
+  line-height: 0;
+}
+
+.right-answer{
+  color: green;
+  margin: 0;
+  line-height: 0;
+}
+/*SFS light red = #c30b0a;
+SFS dark red = #9f2026; */
+
+
   

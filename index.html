@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css"> 
 
 </head>
@@ -23,7 +23,7 @@
 <body>
     <header>
         <!-- Full Screen Navigation -->
-        <nav class="indigo darken-3">
+        <nav class="indigo darken-1">
             <div class="nav-wrapper nav-padding">
                 <a href="#" class="brand-logo">Recycle Otago<i class="material-icons left">terrain</i></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse show-on-med-and-down right"><i class="material-icons">menu</i></a>
@@ -36,135 +36,60 @@
                 <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-
-            <!--        Side-Bar Burger         -->
-            <ul class="side-nav grey darken-2" id="mobile-demo">
-                
-                <!--        Side-Bar Menu for Small Screens and Mobile Devices     -->
-                <li class="sidenav-header blue">
-                <div class="row">
-                    <div class="col s4">
-                        <img src="https://gravatar.com/avatar/961997eb7fd5c22b3e12fb3c8ca14e11?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" width="48px" height="48px" alt="" class="circle responsive-img valign profile-image">
-                    </div>
-                    <div class="col s8">
-                        <a class="btn-flat dropdown-button waves-effect waves-light white-text" href="#" data-activates="profile-dropdown">Jay<i class="mdi-navigation-arrow-drop-down right"></i></a>
-                        <ul id="profile-dropdown" class="dropdown-content">
-                            <li><a href="#"><i class="material-icons">person</i>Profile</a></li>
-                            <li><a href="#"><i class="material-icons">settings</i>Setting</a></li>
-                            <li><a href="#"><i class="material-icons">help</i>Help</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="material-icons">lock</i>Lock</a></li>
-                            <li><a href="#"><i class="material-icons">exit_to_app</i>Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-                </li>
-                
-                <li class="blue">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header white-text waves-effect waves-blue "><i class="material-icons white-text ">language</i>Language <i class="material-icons right white-text" style="margin-right:0;">arrow_drop_down</i></a>
-                        <div class="collapsible-body z-depth-3">
-                        <ul>
-                            <li><a class="waves-effect waves-blue" href="#">English</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">العربية</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">中文</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">Čeština</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">Nederlands</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">Français</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">Deutsch</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">한국어</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">Português</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">Русский</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">Español</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">Svenska</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">ภาษาไทย</a></li>
-                            <li><a class="waves-effect waves-blue" href="#">Türkçe</a></li>
-                            <li><div class="divider"></div></li>
-                        </ul>
-                        </div>
-                    </li>
-                </ul>
-                </li>
-                
-                
-                
-                <li class="white">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                    <a class="collapsible-header waves-effect waves-blue"><i class="material-icons">folder_special</i>Layouts <i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                        <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">fullscreen</i>Full Screen<span class="new badge right yellow grey lighten-1" data-badge-caption="updated"></span></a></li>
-                        <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">swap_horiz</i>Horizontal Menu<span class="new badge right yellow darken-3"></span></a></li>
-                        <li><div class="divider"></div></li>
-                        </ul>
-                    </div>
-                    </li>
-                </ul>
-                </li>
-                <li class="white">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                    <a class="collapsible-header waves-effect waves-blue"><i class="material-icons">folder_open</i>A submenu <i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                        <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">fullscreen</i>Full Screen</a></li>
-                        <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">swap_horiz</i>Horizontal Menu</a></li>
-                        <li><div class="divider"></div></li>
-                        </ul>
-                    </div>
-                    </li>
-                </ul>
-                </li>
-                <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">mail</i>Menu item</a></li>
-                <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">call</i> Menu item</a></li>
-                <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">android</i> Menu item</a></li>
-                <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">dialpad</i> Menu item</a></li>
-                <li class="white"><div class="divider"></div></li>
-                <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">language</i> Menu item<span class="new badge right yellow darken-3"></span></a></li>
-                
-                <li class="sidenav-footer grey darken-2">
-                <div class="row">  
-                    <div class="social-icons">
-                    <div class="col s2">
-                        <a href="#"><i class="fa fa-lg fa-linkedin-square"></a></i>
-                    </div>
-                    <div class="col s2">
-                        <a href="#"><i class="fa fa-lg fa-facebook-official"></a></i>
-                    </div>
-                    <div class="col s2">
-                        <a href="#"><i class="fa fa-lg fa-twitter"></a></i>
-                    </div>
-                    <div class="col s2">
-                        <a href="#"><i class="fa fa-lg fa-google-plus"></a></i>
-                    </div>
-                    <div class="col s2">
-                        <a href="#"><i class="fa fa-lg fa-pinterest"></a></i>
-                    </div>
-                    <div class="col s2">
-                        <a href="#"><i class="fa fa-lg fa-youtube"></a></i>
-                    </div>
-                    </div>
-                </div>
-                </li>
-            </ul>
-            
-            </div>
         </nav>
 
     </header>
 
     <main>
+        <div class="banner">
+            <h1>SAVE THE WHALES</h1>
+            <div class="water-icon">
+            <i class="fas fa-water fa-10x"></i>
+            </div>
+        </div>
+
         <div class="container">
-            <h1>Recycle Otago</h1>
-        
+            <p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis soluta voluptate odio placeat exercitationem dolores repellat provident! Eaque ullam eos facilis labore cupiditate animi necessitatibus quaerat, aspernatur quo minus.</span>
+                <span>Harum, ducimus, quibusdam tempore aspernatur, repudiandae illum et consequuntur consectetur libero vel maxime recusandae natus voluptate sint molestiae optio similique? Hic quam quia saepe laborum eaque beatae, dicta quod et?</span>
+                <span>Nisi incidunt nihil mollitia maxime aliquam quasi, iste officiis quia ullam fugit aliquid quos unde? Dicta quia perferendis possimus beatae quasi. Perspiciatis cupiditate earum alias suscipit nisi quisquam excepturi. Autem.</span>
+                <span>Est totam distinctio vitae accusamus aliquam voluptatum beatae nostrum sapiente hic molestiae nesciunt quisquam iure corporis aperiam autem esse dolorum doloremque tenetur ipsam dolores placeat neque quia, incidunt quibusdam. Distinctio?</span>
+                <span>Quibusdam sunt obcaecati voluptate hic quae iure, veritatis quo fuga veniam perspiciatis soluta, dicta quisquam libero quam? Tenetur, eligendi modi veritatis dolorum architecto ipsa saepe, alias vero cupiditate eveniet aliquam.</span>
+            </p>
+            <p>
+                <span>Velit maxime alias odit! Ullam asperiores culpa reiciendis ratione sunt eos nam nulla mollitia ipsam. Eius suscipit, maiores, optio quos sapiente magni deserunt consequatur culpa quisquam eveniet facilis cum. Voluptate?</span>
+                <span>Quo quae, laborum dignissimos eligendi assumenda laboriosam aut ratione aliquam excepturi dolores eos quasi obcaecati tempora! Quam voluptatem repellendus dignissimos, sequi sint voluptatum quidem excepturi, voluptate modi facere in recusandae.</span>
+                <span>In numquam qui dicta quod excepturi cupiditate dolores nemo nisi laudantium praesentium hic, asperiores, similique blanditiis maiores, accusamus maxime consectetur sapiente. Laudantium quam aliquid consectetur quas soluta repellat error illo.</span>
+                <span>Et qui incidunt cupiditate nostrum. Suscipit, laudantium. Unde excepturi nisi, sint id nihil cum eius necessitatibus non distinctio soluta deleniti at exercitationem quod, natus assumenda eos qui error ducimus. Animi?</span>
+                <span>Modi vero nostrum fugit repellendus ea minima ad temporibus ex saepe, quod itaque voluptates! Modi quae eos corporis excepturi, assumenda aliquam optio cupiditate, sint aliquid vel deserunt accusantium fugiat tenetur!</span>
+            </p>
+            <p>
+                <span>Ipsa expedita dolor, sit laudantium illo nulla eius, aliquam consequatur repellat soluta debitis veniam ullam non? Earum obcaecati deleniti laboriosam, est, tempora, delectus commodi debitis sapiente recusandae cumque cupiditate facilis?</span>
+                <span>Laborum, quam quaerat fuga itaque sunt culpa ea! Veritatis rerum laborum illum ex maiores, totam voluptas expedita tenetur deleniti vero, hic, temporibus nesciunt pariatur tempore qui quia cupiditate ratione dicta.</span>
+                <span>Aspernatur ipsum omnis ipsa reprehenderit veritatis voluptatem similique quidem expedita totam. Repudiandae voluptate doloremque sequi, fugit modi necessitatibus omnis libero sit quisquam reiciendis sunt mollitia possimus voluptatum, ratione officia incidunt!</span>
+                <span>Quo molestias omnis et repellendus vero labore dolorem beatae? Eius fuga temporibus nobis adipisci cumque, dolorum animi officia commodi vel nihil eum soluta, assumenda sequi enim. Reiciendis tempora soluta molestiae.</span>
+                <span>Quasi ea, amet iure rem modi, veritatis laborum ipsum animi autem esse unde nam perspiciatis optio consequuntur numquam reprehenderit molestiae delectus maxime cumque sequi voluptatibus sit! Nostrum expedita cum harum.</span>
+            </p>
+            <p>
+                <span>Assumenda quisquam cupiditate dicta aspernatur, quis laborum ipsa debitis. Aut molestias architecto aperiam deleniti optio, corrupti pariatur nostrum ab atque minus iure beatae laboriosam quis consequatur! Architecto nobis dignissimos aspernatur.</span>
+                <span>Molestias, doloremque at? Perspiciatis deserunt, asperiores accusantium maxime praesentium perferendis! Facilis iure labore cumque. Ipsum delectus dolor necessitatibus reprehenderit deserunt corporis, rem quibusdam nam tempore, cumque impedit dicta, dolorum minima?</span>
+                <span>Quod, voluptate enim. Ullam nisi distinctio totam, in neque officiis quia vel dolorum inventore laboriosam dignissimos sequi eos tempore saepe beatae minima possimus culpa maiores dolores! Quas porro est molestiae.</span>
+                <span>Blanditiis maiores animi consequatur laborum omnis vel, incidunt et fugiat, molestias officia ad asperiores reiciendis praesentium cupiditate obcaecati. Explicabo rerum accusamus similique voluptatum sapiente impedit consequatur laborum delectus et aspernatur?</span>
+                <span>Rerum expedita minus eveniet velit repellendus unde aspernatur cupiditate illo officiis veritatis distinctio esse voluptas maxime inventore quidem praesentium accusantium in minima reiciendis quaerat placeat, maiores debitis at ea? Illum.</span>
+            </p>
+            <p>
+                <span>Aliquam, officiis molestiae. Alias obcaecati officia laboriosam, quis soluta numquam modi sunt explicabo cupiditate voluptatibus ipsa, similique beatae iste corrupti veniam incidunt distinctio repellendus! Deserunt molestias possimus quaerat fugit aliquid?</span>
+                <span>Adipisci rem tempora corrupti praesentium eligendi sit nam, at magni quam nesciunt, aspernatur vel delectus officiis velit earum distinctio architecto mollitia laudantium aperiam rerum asperiores! Odit consectetur blanditiis laudantium esse!</span>
+                <span>Labore dolores, neque error nulla non rerum laborum fugiat itaque recusandae unde ipsam eos, tenetur totam! Similique, aliquid ad quasi optio vero provident facilis commodi reprehenderit ipsa doloremque fugit possimus.</span>
+                <span>Quia, doloremque error ipsa quibusdam non veritatis commodi? Molestias at magnam cumque facere quasi? Dolor in reiciendis, sit, eos quia omnis explicabo porro, quidem tempora nemo voluptatem quo aliquam debitis!</span>
+                <span>Dolorem similique quaerat enim cupiditate cum quidem sapiente neque quibusdam doloribus mollitia maxime obcaecati consequatur corrupti dolores ducimus deleniti voluptatibus omnis consectetur, numquam maiores hic culpa? Soluta atque delectus aut.</span>
+            </p>
         </div>
     </main>
 
     <!-- Footer Content, Links, page information and Copyright -->
 
-    <footer class="page-footer indigo darken-3">
+    <footer class="page-footer indigo lighten-1">
         <div class="container ">
           <div class="row footer-margin-reset">
             <div class="col l6 s12">
