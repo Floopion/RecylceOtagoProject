@@ -20,7 +20,7 @@ body{
 
 .hero-regular {
   margin-top: 20px;
-  height: 50vh;
+  height: 40vh;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,6 +34,18 @@ body{
 
 .contact{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/contact-us.jpg');
+}
+
+.greenNz{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/sea.jpg');
+}
+
+.e-waste{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/chip.jpeg');
+}
+
+.area{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/recycle-cycle.jpg');
 }
 
 .hero-text-regular{
