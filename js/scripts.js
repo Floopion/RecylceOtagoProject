@@ -7,16 +7,31 @@ $(document).ready(function() {
 	});
 
   // if the checkboxes are changed, assign them a 1 or 0 so that the answer score function 
-  // can understand if the answer is correct or not.
+	// can understand if the answer is correct or not.
+	// Note the 1 or 0 will be reversed depending on if the true or false anser is correct
   $('#checkbox1').click(function () {
-    $(this).val(this.checked ? 1 : 0)
-    });
+		$(this).val(this.checked ? 0 : 1)
+		});
+		
+	$('#checkbox2').click(function () {
+		$(this).val(this.checked ? 1 : 0)
+		});
+
+	$('#checkbox3').click(function () {
+		$(this).val(this.checked ? 1 : 0)
+		});
+
+	$('#checkbox4').click(function () {
+		$(this).val(this.checked ? 1 : 0)
+		});
 
 });
 
+
+//The following runs when the Submit button is pressed
 function submitQuiz() {
 
-	// get each answer score
+	// get each answer score return a 1 or a 0 which is the value of the checked radio box
 		function answerScore (qName) {
 			var radiosNo = document.getElementsByName(qName);
 
@@ -33,72 +48,124 @@ function submitQuiz() {
 			return answerValue;
 		}
 
-	// calc score with answerScore function
-		var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4') + answerScore('q5') + answerScore('q6') + answerScore('q7') + answerScore('q8') + answerScore('q9') + answerScore('q10'));
+
+		// Calc score is equal to the return function 'score total'
+		// Score total rolls through a for loop and adds the returned variable ( 1 or 0 ) to a running total
+		// It then returns this total to the calc score variable as the total number of correct questions
 		
-    var AnswerString = "Question # ";
+		// This was written to replace the original code of:
+		//var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4') + answerScore('q5') + answerScore('q6') + answerScore('q7') + answerScore('q8') + answerScore('q9') + answerScore('q10')); 
 
-  // Print correct answers green and wrong answers red. 
-  // Append all answers to the answers div. 
-		if (answerScore('q1') === 0) {
-			document.getElementById('Answers').innerHTML += '<p class="wrong-answer">' + AnswerString + '1: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<p class="right-answer">' + AnswerString + '1: Correct!</p>';
-     }
+		var calcScore = score_total();
+		
+		function score_total() {
 
-     if (answerScore('q2') === 0) {
-			document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '2: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '2: Correct!</p>';
-     }
+			var totalNumber = 0;
 
-     if (answerScore('q3') === 0) {
-			document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '3: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '3: Correct!</p>';
-     }
+			for(var i = 0; i<10;i++){
 
-     if (answerScore('q4') === 0) {
-			document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '4: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '4: Correct!</p>';
-		 }
+				var questionNum = 'q'+(i+1);
+
+				totalNumber += answerScore(questionNum);
+			};
+
+			return totalNumber;
+		};
+
+
+		var AnswerString = "Question # ";
+		var correctAnswer = [
+			"1",
+			"2",
+			"Although electronic equiptment can be recycled, it must be done at designated e-waste centers.",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"The quiz send it`s regards..."			
+		];
+
+		// This for loop will change the 'questionNUm to be q(i) and then pass that in to answer score function.
+		// Every time it rolls around i is incremented so that it can keep track of which question to grab.
+		// If it finds a wrong answer the loop will use i to grab the corresponding corect answer from the correct answer array and insert that into the string; 
+		// Append all answers to the answers div. 
+
+		for(var i = 0; i<10;i++){
+
+			var questionNum = 'q'+(i+1);
+
+			if (answerScore(questionNum) === 0) {
+				document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString +  (i+1) + ' : Wrong! ' + correctAnswer[i] + '</p>'
+			}else{
+				document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + (i+1) + ' : Correct!</p>';
+			 }
+		}
+
+		//The above For Loop Replaces the Below Orginal code
+
+		// if (answerScore('q1') === 0) {
+		// 	document.getElementById('Answers').innerHTML += '<p class="wrong-answer">' + AnswerString + '1: Wrong! The Correct answer was - (placeholder)</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<p class="right-answer">' + AnswerString + '1: Correct!</p>';
+    //  }
+
+    //  if (answerScore('q2') === 0) {
+		// 	document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '2: Wrong! The Correct answer was - (placeholder)</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '2: Correct!</p>';
+    //  }
+
+    //  if (answerScore('q3') === 1) {
+		// 	document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '3: Wrong! Although electronic equiptment can be recycled, it must be done at designated e-waste centers.</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '3: Correct!</p>';
+    //  }
+
+    //  if (answerScore('q4') === 0) {
+		// 	document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '4: Wrong! The Correct answer was - (placeholder)</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '4: Correct!</p>';
+		//  }
 		 
-		if (answerScore('q5') === 0) {
-			document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '5: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '5: Correct!</p>';
-     }
+		// if (answerScore('q5') === 0) {
+		// 	document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '5: Wrong! The Correct answer was - (placeholder)</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '5: Correct!</p>';
+    //  }
 
-     if (answerScore('q6') === 0) {
-			document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '6: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '6: Correct!</p>';
-     }
+    //  if (answerScore('q6') === 0) {
+		// 	document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '6: Wrong! The Correct answer was - (placeholder)</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '6: Correct!</p>';
+    //  }
 
-     if (answerScore('q7') === 0) {
-			document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '7: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '7: Correct!</p>';
-     }
+    //  if (answerScore('q7') === 0) {
+		// 	document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '7: Wrong! The Correct answer was - (placeholder)</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '7: Correct!</p>';
+    //  }
 
-     if (answerScore('q8') === 0) {
-			document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '8: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '8: Correct!</p>';
-		 }
+    //  if (answerScore('q8') === 0) {
+		// 	document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '8: Wrong! The Correct answer was - (placeholder)</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '8: Correct!</p>';
+		//  }
 		 
-		 if (answerScore('q9') === 0) {
-			document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '9: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '9: Correct!</p>';
-     }
+		//  if (answerScore('q9') === 0) {
+		// 	document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '9: Wrong! The Correct answer was - (placeholder)</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '9: Correct!</p>';
+    //  }
 
-     if (answerScore('q10') === 0) {
-			document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '10: Wrong! The Correct answer was - (placeholder)</p>'
-    }else{
-      document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '10: Correct!</p>';
-     }
+    //  if (answerScore('q10') === 0) {
+		// 	document.getElementById('Answers').innerHTML += '<br><p class="wrong-answer">' + AnswerString + '10: Wrong! The quiz send it`s regards...</p>'
+    // }else{
+    //   document.getElementById('Answers').innerHTML += '<br><p class="right-answer">' + AnswerString + '10: Correct!</p>';
+    //  }
+
+
 
 	// calculate "possible score" integer
 		var questionCountArray = document.getElementsByClassName('question');
