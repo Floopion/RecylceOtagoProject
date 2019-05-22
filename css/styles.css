@@ -4,6 +4,21 @@ body {
   min-height: 100vh;
   flex-direction: column; }
 
+main {
+  flex: 1 0 auto;
+  font-size: 15px; }
+
+h1 {
+  margin-bottom: 3.1rem;
+  text-align: left; }
+
+blockquote {
+  border-left: 5px solid orange; }
+
+p {
+  text-align: justify; }
+
+/*        Styles for all hero images / banners        */
 .hero-home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Hills.jpg");
   height: 70vh;
@@ -58,19 +73,7 @@ body {
     font-size: 55px;
     text-align: right; }
 
-.quiz-intro {
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center; }
-
-main {
-  flex: 1 0 auto; }
-
-h1 {
-  margin-bottom: 3.1rem;
-  text-align: left; }
-
-/*            Navigation Menu & Side Navigation Styles           */
+/*            Navigation Menu & footer          */
 .nav-padding {
   margin: 0 50px; }
 
@@ -78,8 +81,9 @@ h1 {
 .footer-margin-reset {
   margin-bottom: 0; }
 
+/*        Area Page            */
 .area-page-banner {
-  max-width: 60%;
+  max-width: 45%;
   height: auto;
   float: right;
   border: transparent;
@@ -88,6 +92,11 @@ h1 {
   border-bottom: orange solid medium; }
 
 /*          Quiz Page           */
+.quiz-intro {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center; }
+
 .quiz-title {
   background-color: #212121;
   color: white;
