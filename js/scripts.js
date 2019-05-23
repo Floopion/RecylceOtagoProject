@@ -36,7 +36,7 @@ function submitQuiz() {
 			var radiosNo = document.getElementsByName(qName);
 
 			for (var i = 0, length = radiosNo.length; i < length; i++) {
-   				if (radiosNo[i].checked) {
+   				if (radiosNo[i].checked || radiosNo[i].selected) {
 			// do something with radiosNo
 					var answerValue = Number(radiosNo[i].value);
 				}
@@ -75,13 +75,13 @@ function submitQuiz() {
 
 		var AnswerString = "Question # ";
 		var correctAnswer = [
-			"1",
+			"Cargill Enterprise is at 199 Hillside Road Dunedin.",
 			"2",
 			"Although electronic equiptment can be recycled, it must be done at designated e-waste centers.",
 			"4",
 			"5",
 			"6",
-			"7",
+			"Mount Cooee has started accepting e-waste from 2016.",
 			"8",
 			"9",
 			"The quiz send it`s regards..."			

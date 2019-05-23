@@ -12,7 +12,7 @@ body{
 
 main {
   flex: 1 0 auto;
-  font-size: 15px;
+  font-size: 17px;
   //padding: 20px 0;
 }
 
@@ -124,10 +124,54 @@ p{
   float:right;
   border:transparent;
   border-radius: 10px;
-  margin: 0px 10px 10px 10px;
+  margin: 0px 10px 10px 50px;
   border-bottom: orange solid medium;
   
 }
+
+.norm-list{
+  list-style-position: inside  !important;
+  list-style-type: circle !important;
+}
+
+//        Grid Styling 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  padding: 50px;
+  text-align: left;
+  align-items: center;
+}
+
+.top-whitespace{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.width-restrict{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+.mapouter{
+  position:relative;
+  text-align:right;
+  height:400px;
+  width:400px;
+}
+
+.gmap_canvas{
+  overflow:hidden;
+  background:none!important;
+  height:400px;
+  width:400px;
+}
+
 
 ///////////////////////////////////
 /*          Quiz Page           */
@@ -137,7 +181,9 @@ p{
   font-weight: bold;
     font-size: 20px;
     text-align: center;
+    margin: 60px;
 }
+
 
 .quiz-title{
   background-color: #212121;
@@ -230,3 +276,10 @@ label {
   font-size: 22px;
 }
   
+///////////////////////////////////////
+/*          Contact Page            */
+/////////////////////////////////////
+
+.card-margin{
+  margin-left: 2rem;
+}
