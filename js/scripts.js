@@ -18,11 +18,11 @@ $(document).ready(function() {
 		});
 
 	$('#checkbox3').click(function () {
-		$(this).val(this.checked ? 1 : 0)
+		$(this).val(this.checked ? 0 : 1)
 		});
 
 	$('#checkbox4').click(function () {
-		$(this).val(this.checked ? 0 : 1)
+		$(this).val(this.checked ? 1 : 0)
 		});
 
 });
@@ -41,6 +41,9 @@ function submitQuiz() {
 			for (var i = 0, length = radiosNo.length; i < length; i++) {
    				if (radiosNo[i].checked || radiosNo[i].selected) {
 			// do something with radiosNo
+					var answerValue = Number(radiosNo[i].value);
+				}
+				if(radiosNo[i].name == "q3" || radiosNo[i].name == "q8"){
 					var answerValue = Number(radiosNo[i].value);
 				}
 			}
@@ -82,11 +85,11 @@ function submitQuiz() {
 			"Only glass can be put in the blue recycle bins in Dunedin.",
 			"Although electronic equiptment can be recycled, it must be done at designated e-waste centers.",
 			"Waste Busters is in Alexandra.",
-			"5",
-			"6",
+			"Nappies can not be recycled.",
+			"Currently glass is not recycled.",
 			"Mount Cooee has started accepting e-waste from 2016.",
 			"The Maximum weight is 75kg.",
-			"9",
+			"Cooee Landfill accepts branches less than 150mm.",
 			"The quiz send it`s regards..."			
 		];
 
@@ -179,10 +182,10 @@ function submitQuiz() {
 		}
 
 	// show score as "score/possible score"
-		var showScore = "Your Score: " + calcScore +"/" + questionCounter +"...";
-	// if 4/4, "perfect score!"
+		var showScore = "Your Score: " + calcScore +"/" + questionCounter +"..." + '<br><button class="btn waves-effect waves-light deep-orange pulse quiz-button" id="submitButton" type="button" onClick="window.location.href=window.location.href">Retry<i class="material-icons right">loop</i></button>';
+	// if 10/10, "perfect score!"
 		if (calcScore === questionCounter) {
-			showScore = showScore + "&nbsp; <strong>Perfect Score! You saved the Whales!</strong>"
+			showScore = showScore + '&nbsp; <strong>Perfect Score! You saved the Whales!</strong>'
 		};
 		document.getElementById('userScore').innerHTML = showScore;
 	}
@@ -191,6 +194,8 @@ function submitQuiz() {
 	 //////////////////////////////////////////////////////////////////////////////////////////////////////
 	// https://stackoverflow.com/questions/16024346/lastmodified-function-returns-current-date-and-time  /
  //////////////////////////////////////////////////////////////////////////////////////////////////////
+/* 		JavaScript Functions for last modified		*/
+/////////////////////////////////////////////////
 
 	function lastModified() {
 		var modiDate = new Date(document.lastModified);
