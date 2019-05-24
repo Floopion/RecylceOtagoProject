@@ -114,6 +114,21 @@ p{
     margin-bottom: 0;
   }
 
+///////////////////////////
+/*      Index Page      */
+/////////////////////////
+
+.index-grid{
+  max-width: 20vw;
+  text-align: center;
+}
+
+.index-text{
+  text-decoration:none; 
+  color:black;
+  text-align:center;
+}
+
 //////////////////////////////////
 /*        Area Page            */
 ///////////////////////////////
@@ -139,6 +154,7 @@ p{
   display: grid;
   grid-template-columns: auto auto;
   padding: 10px;
+  justify-items: center;
 }
 
 .grid-item {

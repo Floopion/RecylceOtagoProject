@@ -81,6 +81,16 @@ p {
 .footer-margin-reset {
   margin-bottom: 0; }
 
+/*      Index Page      */
+.index-grid {
+  max-width: 20vw;
+  text-align: center; }
+
+.index-text {
+  text-decoration: none;
+  color: black;
+  text-align: center; }
+
 /*        Area Page            */
 .area-page-banner {
   max-width: 45%;
@@ -98,7 +108,8 @@ p {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
-  padding: 10px; }
+  padding: 10px;
+  justify-items: center; }
 
 .grid-item {
   padding: 50px;

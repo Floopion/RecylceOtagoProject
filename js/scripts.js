@@ -22,11 +22,14 @@ $(document).ready(function() {
 		});
 
 	$('#checkbox4').click(function () {
-		$(this).val(this.checked ? 1 : 0)
+		$(this).val(this.checked ? 0 : 1)
 		});
 
 });
 
+///////////////////////////////////////////////////////
+//   https://codepen.io/harrysadlermusic/pen/DihjK   /
+/////////////////////////////////////////////////////
 
 //The following runs when the Submit button is pressed
 function submitQuiz() {
@@ -76,13 +79,13 @@ function submitQuiz() {
 		var AnswerString = "Question # ";
 		var correctAnswer = [
 			"Cargill Enterprise is at 199 Hillside Road Dunedin.",
-			"2",
+			"Only glass can be put in the blue recycle bins in Dunedin.",
 			"Although electronic equiptment can be recycled, it must be done at designated e-waste centers.",
-			"4",
+			"Waste Busters is in Alexandra.",
 			"5",
 			"6",
 			"Mount Cooee has started accepting e-waste from 2016.",
-			"8",
+			"The Maximum weight is 75kg.",
 			"9",
 			"The quiz send it`s regards..."			
 		];
@@ -176,10 +179,36 @@ function submitQuiz() {
 		}
 
 	// show score as "score/possible score"
-		var showScore = "Your Score: " + calcScore +"/" + questionCounter +"!";
+		var showScore = "Your Score: " + calcScore +"/" + questionCounter +"...";
 	// if 4/4, "perfect score!"
 		if (calcScore === questionCounter) {
-			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+			showScore = showScore + "&nbsp; <strong>Perfect Score! You saved the Whales!</strong>"
 		};
 		document.getElementById('userScore').innerHTML = showScore;
 	}
+
+
+	 //////////////////////////////////////////////////////////////////////////////////////////////////////
+	// https://stackoverflow.com/questions/16024346/lastmodified-function-returns-current-date-and-time  /
+ //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	function lastModified() {
+		var modiDate = new Date(document.lastModified);
+		var showAs = modiDate.getDate() + "-" + (modiDate.getMonth() + 1) + "-" + modiDate.getFullYear();
+		return showAs
+	}
+
+	function GetTime() {
+		var modiDate = new Date();
+		var Seconds
+
+		if (modiDate.getSeconds() < 10) {
+				Seconds = "0" + modiDate.getSeconds();
+		} else {
+				Seconds = modiDate.getSeconds();
+		}
+
+		var modiDate = new Date();
+		var CurTime = modiDate.getHours() + ":" + modiDate.getMinutes() + ":" + Seconds
+		return CurTime
+	}	
